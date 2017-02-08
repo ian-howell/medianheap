@@ -39,4 +39,29 @@ BOOST_AUTO_TEST_CASE(out_of_bounds_exception)
   BOOST_CHECK(false);
 }
 
+BOOST_AUTO_TEST_CASE(insert)
+{
+  BOOST_CHECK(false);
+}
+
+BOOST_AUTO_TEST_CASE(top)
+{
+  BOOST_CHECK(false);
+}
+
+BOOST_AUTO_TEST_CASE(pop)
+{
+  BOOST_CHECK(false);
+}
+
+BOOST_AUTO_TEST_CASE(empty)
+{
+  BOOST_CHECK(false);
+}
+
+BOOST_AUTO_TEST_CASE(size)
+{
+  BOOST_CHECK(false);
+}
+
 BOOST_AUTO_TEST_SUITE_END()
