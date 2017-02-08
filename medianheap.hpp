@@ -1,7 +1,7 @@
 #include <queue>
 
 template <typename T>
-medianheap<T>::medianheap()
+medianheap<T>::medianheap() : length(0)
 { /* Intentionally left empty */ }
 
 template <typename T>
@@ -16,14 +16,19 @@ void medianheap<T>::insert(const T& x)
 }
 
 template <typename T>
-const T& medianheap<T>::top()
+const T& medianheap<T>::top() throw (OutOfBoundsException)
 {
+  if (length == 0)
+    throw OutOfBoundsException();
   return median;
 }
 
 template <typename T>
-void medianheap<T>::pop()
+void medianheap<T>::pop() throw (OutOfBoundsException)
 {
+  if (length == 0)
+    throw OutOfBoundsException();
+
   if (min_heap.size() >= max_heap.size())
     min_heap.pop();
   else

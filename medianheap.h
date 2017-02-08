@@ -1,5 +1,8 @@
 #pragma once
+#include <cstddef> // for size_t
 #include <queue>
+
+class OutOfBoundsException {};
 
 template <typename T>
 class medianheap
@@ -7,6 +10,7 @@ class medianheap
 public:
   /* Constructor
    * Builds the min and max heaps, using their default constructors
+   * Initializes length to 0
    */
   medianheap();
 
@@ -27,18 +31,19 @@ public:
    *
    * @return const T&: the current top of the heap
    */
-  const T& top();
+  const T& top() throw (OutOfBoundsException);
 
   /* pop
    * Removes the top item from the heap
    *
    * Pre : The heap must not be empty, otherwise an exception is thrown
    */
-  void pop();
+  void pop() throw (OutOfBoundsException);
 
 private:
   std::priority_queue<T, std::vector<T>, std::less<T> > max_heap;
   std::priority_queue<T, std::vector<T>, std::greater<T> > min_heap;
+  size_t length;
   T median;
 
   /* balance
@@ -53,4 +58,3 @@ private:
 };
 
 #include "medianheap.hpp"
-
