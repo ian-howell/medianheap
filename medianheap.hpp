@@ -8,9 +8,15 @@ template <typename T>
 void medianheap<T>::insert(const T& x)
 {
   if (min_heap.empty() || x > median)
+  {
     min_heap.push(x);
+    length++;
+  }
   else
+  {
     max_heap.push(x);
+    length++;
+  }
 
   balance();
 }
@@ -30,9 +36,15 @@ void medianheap<T>::pop() throw (OutOfBoundsException)
     throw OutOfBoundsException();
 
   if (min_heap.size() >= max_heap.size())
+  {
     min_heap.pop();
+    length--;
+  }
   else
+  {
     max_heap.pop();
+    length--;
+  }
 
   balance();
 }
@@ -50,11 +62,13 @@ void medianheap<T>::balance()
   {
     max_heap.push(min_heap.top());
     min_heap.pop();
+    length--;
   }
   else if (max_heap.size() > min_heap.size() + 1)
   {
     min_heap.push(max_heap.top());
     max_heap.pop();
+    length--;
   }
 
   if (min_heap.size() >= max_heap.size())
