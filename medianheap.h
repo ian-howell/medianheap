@@ -40,6 +40,13 @@ public:
    */
   void pop() throw (OutOfBoundsException);
 
+  /* size
+   * Returns the number of elements currently in the heap
+   *
+   * @return size_t: The number of elements in the heap
+   */
+  size_t size();
+
 private:
   std::priority_queue<T, std::vector<T>, std::less<T> > max_heap;
   std::priority_queue<T, std::vector<T>, std::greater<T> > min_heap;

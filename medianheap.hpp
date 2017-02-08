@@ -38,6 +38,12 @@ void medianheap<T>::pop() throw (OutOfBoundsException)
 }
 
 template <typename T>
+size_t medianheap<T>::size()
+{
+  return length;
+}
+
+template <typename T>
 void medianheap<T>::balance()
 {
   if (min_heap.size() > max_heap.size() + 1)
