@@ -31,7 +31,7 @@ public:
    *
    * @return const T&: the current top of the heap
    */
-  const T& top() throw (OutOfBoundsException);
+  const T& top() const throw (OutOfBoundsException);
 
   /* pop
    * Removes the top item from the heap
@@ -45,7 +45,7 @@ public:
    *
    * @return size_t: The number of elements in the heap
    */
-  size_t size();
+  size_t size() const;
 
 private:
   std::priority_queue<T, std::vector<T>, std::less<T> > max_heap;

@@ -16,7 +16,7 @@ void medianheap<T>::insert(const T& x)
 }
 
 template <typename T>
-const T& medianheap<T>::top() throw (OutOfBoundsException)
+const T& medianheap<T>::top() const throw (OutOfBoundsException)
 {
   if (length == 0)
     throw OutOfBoundsException();
@@ -38,7 +38,7 @@ void medianheap<T>::pop() throw (OutOfBoundsException)
 }
 
 template <typename T>
-size_t medianheap<T>::size()
+size_t medianheap<T>::size() const
 {
   return length;
 }
