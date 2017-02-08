@@ -1,6 +1,5 @@
 #pragma once
 #include <queue>
-using namespace std;
 
 template <typename T>
 class medianheap
@@ -38,8 +37,8 @@ public:
   void pop();
 
 private:
-  priority_queue<T, vector<T>, less<T> > max_heap;
-  priority_queue<T, vector<T>, greater<T> > min_heap;
+  std::priority_queue<T, std::vector<T>, std::less<T> > max_heap;
+  std::priority_queue<T, std::vector<T>, std::greater<T> > min_heap;
   T median;
 
   /* balance
@@ -53,5 +52,5 @@ private:
   void balance();
 };
 
-#include "hourglassheap.hpp"
+#include "medianheap.hpp"
 

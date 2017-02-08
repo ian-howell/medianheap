@@ -1,5 +1,4 @@
 #include <queue>
-using namespace std;
 
 template <typename T>
 medianheap<T>::medianheap()
