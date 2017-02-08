@@ -1,0 +1,14 @@
+# Executable
+driver
+
+# Object files
+*.o
+
+# Testing/Coverage files
+*.gcno
+*.gcda
+*.gcov
+testsuite
+
+# Dependency list
+depend
