@@ -7,7 +7,8 @@ BOOST_AUTO_TEST_SUITE(medianheap_suite)
 /* Default Constructor Test */
 BOOST_AUTO_TEST_CASE(default_constructor)
 {
-  BOOST_CHECK(false);
+  medianheap<int> empty;
+  BOOST_CHECK_EQUAL(empty.size(), 0);
 }
 
 /* Copy Constructor Test */
