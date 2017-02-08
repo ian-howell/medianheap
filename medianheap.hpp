@@ -2,11 +2,11 @@
 using namespace std;
 
 template <typename T>
-HourglassHeap<T>::HourglassHeap()
+medianheap<T>::medianheap()
 { /* Intentionally left empty */ }
 
 template <typename T>
-void HourglassHeap<T>::insert(const T& x)
+void medianheap<T>::insert(const T& x)
 {
   if (min_heap.empty() || x > median)
     min_heap.push(x);
@@ -17,13 +17,13 @@ void HourglassHeap<T>::insert(const T& x)
 }
 
 template <typename T>
-T HourglassHeap<T>::top()
+const T& medianheap<T>::top()
 {
   return median;
 }
 
 template <typename T>
-void HourglassHeap<T>::pop()
+void medianheap<T>::pop()
 {
   if (min_heap.size() >= max_heap.size())
     min_heap.pop();
@@ -34,7 +34,7 @@ void HourglassHeap<T>::pop()
 }
 
 template <typename T>
-void HourglassHeap<T>::balance()
+void medianheap<T>::balance()
 {
   if (min_heap.size() > max_heap.size() + 1)
   {
