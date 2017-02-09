@@ -64,6 +64,12 @@ size_t medianheap<T>::size() const
 }
 
 template <typename T>
+size_t medianheap<T>::empty() const
+{
+  return length == 0;
+}
+
+template <typename T>
 void medianheap<T>::balance()
 {
   if (min_heap.size() > max_heap.size() + 1)

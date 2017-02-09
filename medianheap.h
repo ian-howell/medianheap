@@ -56,6 +56,13 @@ public:
    */
   size_t size() const;
 
+  /* empty
+   * Returns true if the heap is empty
+   *
+   * @return bool: True if the heap is empty
+   */
+  size_t empty() const;
+
 private:
   std::priority_queue<T, std::vector<T>, std::less<T> > max_heap;
   std::priority_queue<T, std::vector<T>, std::greater<T> > min_heap;
