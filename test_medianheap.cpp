@@ -62,7 +62,13 @@ BOOST_AUTO_TEST_CASE(empty)
 
 BOOST_AUTO_TEST_CASE(size)
 {
-  BOOST_CHECK(false);
+  medianheap<int> heap;
+  BOOST_CHECK_EQUAL(heap.size(), 0);
+  for (int i = 1; i <= 5; i++)
+  {
+    heap.push(i);
+    BOOST_CHECK_EQUAL(heap.size(), i);
+  }
 }
 
 BOOST_AUTO_TEST_SUITE_END()
