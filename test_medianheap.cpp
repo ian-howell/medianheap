@@ -57,7 +57,8 @@ BOOST_AUTO_TEST_CASE(pop)
 
 BOOST_AUTO_TEST_CASE(empty)
 {
-  BOOST_CHECK(false);
+  medianheap<int> heap;
+  BOOST_CHECK(heap.empty());
 }
 
 BOOST_AUTO_TEST_CASE(size)
