@@ -32,7 +32,20 @@ BOOST_AUTO_TEST_CASE(copy_constructor)
 /* Assignment Operator test */
 BOOST_AUTO_TEST_CASE(assignment_operator)
 {
-  BOOST_CHECK(false);
+  medianheap<int> heap1;
+  for (int i = 0; i < 10; i++)
+    heap1.push(i);
+
+  medianheap<int> heap2;
+  heap2 = heap1;
+  while (!heap1.empty())
+  {
+    BOOST_CHECK_EQUAL(heap1.top(), heap2.top());
+    BOOST_CHECK_EQUAL(heap1.size(), heap2.size());
+    heap1.pop();
+    heap2.pop();
+  }
+  BOOST_CHECK(heap2.empty());
 }
 
 /* Equality Operator */
