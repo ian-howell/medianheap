@@ -10,6 +10,7 @@ medianheap<T>::medianheap(const medianheap<T>& source)
   min_heap = source.min_heap;
   max_heap = source.max_heap;
   length = source.length;
+  median = source.median;
 }
 
 template <typename T>
