@@ -14,7 +14,7 @@ public:
    */
   medianheap();
 
-  /* insert
+  /* push
    * Inserts the value x into the medianheap
    *
    * Pre : Type T must have the > operator defined
@@ -22,7 +22,7 @@ public:
    *
    * @param const T& x: The value to insert
    */
-  void insert(const T& x);
+  void push(const T& x);
 
   /* top
    * Returns the top of the heap

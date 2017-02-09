@@ -5,7 +5,7 @@ medianheap<T>::medianheap() : length(0)
 { /* Intentionally left empty */ }
 
 template <typename T>
-void medianheap<T>::insert(const T& x)
+void medianheap<T>::push(const T& x)
 {
   if (min_heap.empty() || x > median)
   {
