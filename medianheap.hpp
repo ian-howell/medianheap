@@ -14,6 +14,19 @@ medianheap<T>::medianheap(const medianheap<T>& source)
 }
 
 template <typename T>
+const medianheap<T>& medianheap<T>::operator=(const medianheap<T>& source)
+{
+  if (this != &source)
+  {
+    min_heap = source.min_heap;
+    max_heap = source.max_heap;
+    length = source.length;
+    median = source.median;
+  }
+  return *this;
+}
+
+template <typename T>
 void medianheap<T>::push(const T& x)
 {
   if (min_heap.empty() || x > median)

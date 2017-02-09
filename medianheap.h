@@ -23,6 +23,14 @@ public:
    */
   medianheap(const medianheap<T>& source);
 
+  /* Operator=
+   * Replaces the contents with a copy of the contents of source
+   *
+   * @param medianheap<T> source: Another container to be used as a source
+   * @return const medianheap<T>&: *this
+   */
+  const medianheap<T>& operator=(const medianheap<T>& source);
+
   /* push
    * Inserts the value x into the medianheap
    *
