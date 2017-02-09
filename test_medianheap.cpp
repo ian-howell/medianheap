@@ -37,7 +37,8 @@ BOOST_AUTO_TEST_CASE(nonequality_operator)
 
 BOOST_AUTO_TEST_CASE(out_of_bounds_exception)
 {
-  BOOST_CHECK(false);
+  medianheap<int> heap;
+  BOOST_CHECK_THROW(heap.pop(), OutOfBoundsException);
 }
 
 BOOST_AUTO_TEST_CASE(insert)
