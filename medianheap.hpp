@@ -70,13 +70,11 @@ void medianheap<T>::balance()
   {
     max_heap.push(min_heap.top());
     min_heap.pop();
-    length--;
   }
   else if (max_heap.size() > min_heap.size() + 1)
   {
     min_heap.push(max_heap.top());
     max_heap.pop();
-    length--;
   }
 
   if (min_heap.size() >= max_heap.size())
