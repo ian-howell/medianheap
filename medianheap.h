@@ -14,6 +14,15 @@ public:
    */
   medianheap();
 
+  /* Copy Constructor
+   * Builds the min and max heaps, using source as a template
+   *
+   * Pre : source must be initialized
+   *
+   * @param const medianheap<T>& source: The heap from whish to copy
+   */
+  medianheap(const medianheap<T>& source);
+
   /* push
    * Inserts the value x into the medianheap
    *
