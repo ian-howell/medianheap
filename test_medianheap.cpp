@@ -48,18 +48,6 @@ BOOST_AUTO_TEST_CASE(assignment_operator)
   BOOST_CHECK(heap2.empty());
 }
 
-/* Equality Operator */
-BOOST_AUTO_TEST_CASE(equality_operator)
-{
-  BOOST_CHECK(false);
-}
- 
-/* Non-Equality Operator */
-BOOST_AUTO_TEST_CASE(nonequality_operator)
-{
-  BOOST_CHECK(false);
-}
-
 BOOST_AUTO_TEST_CASE(out_of_bounds_exception)
 {
   medianheap<int> heap;
