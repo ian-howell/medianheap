@@ -42,7 +42,12 @@ BOOST_AUTO_TEST_CASE(out_of_bounds_exception)
 
 BOOST_AUTO_TEST_CASE(insert)
 {
-  BOOST_CHECK(false);
+  medianheap<int> heap;
+  for (int i = 1; i <= 5; i++)
+  {
+    heap.push(i);
+    BOOST_CHECK_EQUAL(heap.size(), i);
+  }
 }
 
 BOOST_AUTO_TEST_CASE(top)
